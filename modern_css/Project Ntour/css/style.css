@@ -1,0 +1,38 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* Universal selector *, its called because it helps in resetting the browers defult assignment. For example, web browser can auto assign width or margin
+when being loaded. To omit such unusal behaviour we define this on css.  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* check this on web */
+}
+
+body{
+    font-family: "lato",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7px;
+    color: #777;  
+    padding:30px;
+}
+
+.header {
+height: 95vh;
+background-image: linear-gradient( to right bottom,rgba(126, 213, 111, 0.808),rgba(40, 180, 133, 0.801)),url(../img/hero.jpg);
+background-size: cover;
+/* extends full width of image to viewport */
+background-position: top;
+/* what it does is that it will preserve the content of top. wont crop when 
+window is stretched or compressed.  */
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
