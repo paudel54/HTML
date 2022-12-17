@@ -21,7 +21,7 @@ body{
     font-family: "lato",sans-serif;
     font-weight: 400;
     font-size: 16px;
-    /* line-height: 17px; */
+    line-height: 1.7;
     color: #777;  
     padding:30px;
 }
@@ -53,7 +53,7 @@ height: 35px;
     top: 40%;
     left: 50%;
     /* % change with respect to parent whereas in translate wrt element itself */
-    background-color: red;
+    /* background-color: red; */
     transform: translate(-50%, -50%);
 }
 
