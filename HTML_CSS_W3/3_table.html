@@ -3,7 +3,9 @@
     <style>
         table,th,td{
             border: 1px solid black;
+            border-collapse: collapse;
         }
+        tr:hover{background-color: darksalmon;}
     </style>
     <head>
             <title>HTML tables</title>
@@ -28,7 +30,7 @@
                 
                     <td>Kim</td>
                     <td>North Korea</td>
-                    <td>87876545</td>
+                    <td>87876545</td> 
                 </tr>
 
                 <tr>
@@ -39,5 +41,26 @@
                 </tr>
             </table>
 
+            <br> <br> <br>
+
+            <table style="width: 100%;">
+                <tr>
+
+                    <th colspan="2">Country</th>
+                    <th>Exchange rate</th>
+                </tr>
+                <tr>
+                    <td rowspan="2" >Nepal</td>
+                    <td>Rupees</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Dollar</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
     </body>
+    
 </html>
