@@ -1,0 +1,26 @@
+/* Universal selector *, its called because it helps in resetting the browers defult assignment. For example, web browser can auto assign width or margin
+when being loaded. To omit such unusal behaviour we define this on css.  */
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+   
+    /* check this on web  constraints element inside box limits elements to take more space esp padding and border */
+}
+html{
+    font-size: 62.5%;
+    /* 100% ==> 16px so, if we want want to have 10 px divide 10/16 == 62.5% */
+}
+
+
+body{
+    font-family: "lato",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;  
+    /* padding:30px; */
+    padding: 3rem;
+    box-sizing: border-box; 
+}
