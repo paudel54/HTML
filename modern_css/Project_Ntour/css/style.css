@@ -26,6 +26,9 @@
     opacity: 1;
     transform: translate(0); } }
 
+.logo:hover {
+  animation: moveInRight 1s ease-out; }
+
 /* Universal selector *, its called because it helps in resetting the browers defult assignment. For example, web browser can auto assign width or margin
 when being loaded. To omit such unusal behaviour we define this on css.  */
 *, *::after, *::before {
@@ -39,14 +42,37 @@ html {
   /* 100% ==> 16px so, if we want want to have 10 px divide 10/16 == 62.5% */ }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: "lato",sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
   /* padding:30px; */
-  padding: 3rem;
-  box-sizing: border-box; }
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* to fix animation glitch hide back part of transforming element */
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -98,7 +124,7 @@ body {
   /* extends full width of image to viewport */
   background-position: top;
   /* what it does is that it will preserve the content of top. wont crop when 
-window is stretched or compressed.  */
+    window is stretched or compressed.  */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
   .header__logo-box {
@@ -116,27 +142,3 @@ window is stretched or compressed.  */
     text-align: center; }
   .header__logo {
     height: 3.5rem; }
-
-.logo:hover {
-  animation: moveInRight 1s ease-out; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* to fix animation glitch hide back part of transforming element */
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
