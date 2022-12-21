@@ -1,0 +1,43 @@
+.card{
+//prespective property
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50;
+
+    &__side{
+        color: #fff;
+        font-size: 2rem;
+
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+
+        &--front{
+            background-color: orangered;
+        }
+
+        &--back{
+            background-color: green; 
+            transform: rotateY(180deg);
+        }
+    }
+
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+}   
+
+//when we hover card side will be transformed.  //.card:hover.card_side
