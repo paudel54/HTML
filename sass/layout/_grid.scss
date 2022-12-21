@@ -1,7 +1,7 @@
 .row{
     max-width: $grid-width;
     //max-width limit width same for large screen size
-    background-color: #eee;
+    //background-color: #eee;
     margin: 0 auto;
     //margin  top and button 0, keft and right auto 
 
@@ -12,7 +12,7 @@
     @include clearfix;
 
     [class^="col-"]{
-        background-color: orangered;
+        //background-color: orangered;
         float: left;
 
         &:not(:last-child){
