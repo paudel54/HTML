@@ -13,6 +13,7 @@
     background-position: top;
     /* what it does is that it will preserve the content of top. wont crop when 
     window is stretched or compressed.  */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
     //& => selects or points the header. 
