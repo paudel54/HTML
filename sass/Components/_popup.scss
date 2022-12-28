@@ -15,6 +15,7 @@
             box-shadow: 0 2rem 4rem rgba($color-black, .2);
             border-radius: 3px;
             display: table ;
+            overflow: hidden; //to eliminate the border being overlapped by image
         }
 
         &__left{
@@ -22,11 +23,12 @@
             display: table-cell;
             
         }
-
+ 
         &__right{
             width: 66.66%;
             display: table-cell;
             vertical-align: middle;
+            padding: 3rem 5rem;
         }
 
         &__img{
@@ -35,6 +37,14 @@
         }
 
         &__text{
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
 
+            column-count: 2;
+            column-gap: 4rem; //1em =  implies current font size 1.4rem 14 pixel
+            column-rule: 1px solid $color-grey-light-2;
+
+            -moz-hyphens: auto; //for mozila 
+            hyphens: auto;
         }
 }
