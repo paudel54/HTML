@@ -27,18 +27,19 @@ html{
     // }
 
 
-
     @include respond(tab-land){
-        font-size: 56.25%; //considering 1 rem 9 px, 9/16= 56.25% width <900?
+        font-size: 56.25%; //considering 1 rem 9 px, 9/16= 56.25% width <1200?
     }
-
+    
     @include respond(tab-port){
-        font-size: 50%; //considering 1 rem 8 px, 8/16=50% width <600?
+        font-size: 50%; //considering 1 rem 8 px, 8/16=50% width <900?
     }
 
     @include respond(big-desktop){
-        font-size: 80%; //considering 1 rem 12 px, 12/16=75%
+        font-size: 80%; //considering 1 rem 12 px, 12/16=75%  1800px
     }
+
+    //Last declaration wil apply if query are same that justifies why order is more important
 
 }
 
@@ -46,4 +47,9 @@ html{
 body{
 
     box-sizing: border-box; 
+    padding: 3rem;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
 }
