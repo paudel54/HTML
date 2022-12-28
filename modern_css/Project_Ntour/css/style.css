@@ -1,3 +1,11 @@
+/*
+0-600px:    phone
+600-900px:  Tablets potraits
+900-1200px: Tablet Landscape
+{1200-1800px} is where normal style apply. desktop 1st approach
+1800px + : Big desktop
+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -40,6 +48,12 @@ when being loaded. To omit such unusal behaviour we define this on css.  */
 html {
   font-size: 62.5%;
   /* 100% ==> 16px so, if we want want to have 10 px divide 10/16 == 62.5% */ }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }

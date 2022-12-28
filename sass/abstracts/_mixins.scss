@@ -12,3 +12,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+//Media query manager
+
+/*
+0-600px:    phone
+600-900px:  Tablets potraits
+900-1200px: Tablet Landscape
+{1200-1800px} is where normal style apply. desktop 1st approach
+1800px + : Big desktop
+
+*/
+
+@mixin respond-phone{
+   @media (max-width: 600px) {@content};
+}

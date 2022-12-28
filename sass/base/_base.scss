@@ -13,6 +13,14 @@ html{
     //this defines what 1 rem is 
     font-size: 62.5%;
     /* 100% ==> 16px so, if we want want to have 10 px divide 10/16 == 62.5% */
+
+    @media (max-width: 600px){
+        font-size: 50%;
+    }
+    
+    @include respond-phone{
+        font-size: 50%;
+    }
 }
 
 
