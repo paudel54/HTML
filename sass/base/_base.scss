@@ -11,16 +11,35 @@ when being loaded. To omit such unusal behaviour we define this on css.  */
 }
 html{
     //this defines what 1 rem is 
-    font-size: 62.5%;
+    font-size: 62.5%; //1 rem 10 px 
     /* 100% ==> 16px so, if we want want to have 10 px divide 10/16 == 62.5% */
 
-    @media (max-width: 600px){
-        font-size: 50%;
+    // @media (max-width: 600px){
+    //     font-size: 50%;
+    // }
+
+    // @include respond-phone{
+    //     font-size: 50%;
+    // }
+
+    // @include respond(phone){
+    //     font-size: 50%;
+    // }
+
+
+
+    @include respond(tab-land){
+        font-size: 56.25%; //considering 1 rem 9 px, 9/16= 56.25% width <900?
     }
-    
-    @include respond-phone{
-        font-size: 50%;
+
+    @include respond(tab-port){
+        font-size: 50%; //considering 1 rem 8 px, 8/16=50% width <600?
     }
+
+    @include respond(big-desktop){
+        font-size: 80%; //considering 1 rem 12 px, 12/16=75%
+    }
+
 }
 
 

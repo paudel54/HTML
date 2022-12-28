@@ -22,8 +22,33 @@
 {1200-1800px} is where normal style apply. desktop 1st approach
 1800px + : Big desktop
 
+// @mixin respond-phone{
+//    @media (max-width: 600px) { @content };
+// }
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-tab-desktop
+1em = 16px , for media query em are much prefered than rem because 
+it's dependent to browers default font size not the global defination.
 */
 
-@mixin respond-phone{
-   @media (max-width: 600px) {@content};
+@mixin respond($breakpoint){
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em){ @content }; //600px
+    }
+
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.25em){ @content }; //900px
+    }
+
+    @if $breakpoint == tab-land{
+        @media (max-width: 75em){ @content }; //1200px
+    }
+
+    @if $breakpoint == big-desktop{
+        @media (min-width: 112.5em){ @content }; //1800px
+    }
 }
