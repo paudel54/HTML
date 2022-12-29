@@ -33,6 +33,9 @@ $breakpoint argument choices:
 -tab-desktop
 1em = 16px , for media query em are much prefered than rem because 
 it's dependent to browers default font size not the global defination.
+
+
+ORDER: Base + Typography > General Layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint){
