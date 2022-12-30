@@ -1,12 +1,10 @@
-
-
-
 .header {
     height: 95vh;
-    background-image: linear-gradient( 
-        to right bottom,
-        rgba($color-primary-light, 0.808),
-        rgba($color-primary-dark, 0.801)),
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.808),
+            rgba($color-primary-dark, 0.801)
+        ),
         url(../img/hero-small.jpg);
     background-size: cover;
     /* extends full width of image to viewport */
@@ -16,43 +14,44 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-    @media (min-resolution: 192dpi) and (min-width:37.5em), (min-width: 125em) {    //2000/16 : 125 em media queires are in em
-
-        background-image: linear-gradient( 
-        to right bottom,
-        rgba($color-secondary-light, 0.808),
-        rgba($color-secondary-dark, 0.801)),
-        url(../img/hero.jpg);
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+        //2000/16 : 125 em media queires are in em
+        background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.808),
+                rgba($color-primary-dark, 0.801)
+            ),
+            url(../img/hero.jpg);
     }
 
     position: relative;
-    //& => selects or points the header. 
+    //& => selects or points the header.
 
-    @include respond(phone){
+    @include respond(phone) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 
-        &__logo-box {
-            position:absolute;
-            top: 4rem;
-            left: 4rem;
-            border-color: 1px solid-red;
-            
-        }
-    
-        &__text-box{
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            /* % change with respect to parent whereas in translate wrt element itself */
-            /* background-color: red; */
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    
-        &__logo{
-            height: 3.5rem;
-            }
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        border-color: 1px solid-red;
     }
-    
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* % change with respect to parent whereas in translate wrt element itself */
+        /* background-color: red; */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+}
