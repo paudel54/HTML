@@ -7,7 +7,7 @@
         to right bottom,
         rgba($color-primary-light, 0.808),
         rgba($color-primary-dark, 0.801)),
-        url(../img/hero.jpg);
+        url(../img/hero-small.jpg);
     background-size: cover;
     /* extends full width of image to viewport */
     background-position: top;
@@ -15,6 +15,15 @@
     window is stretched or compressed.  */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @media (min-resolution: 192dpi){
+        background-image: linear-gradient( 
+        to right bottom,
+        rgba($color-secondary-light, 0.808),
+        rgba($color-secondary-dark, 0.801)),
+        url(../img/hero.jpg);
+    }
+
     position: relative;
     //& => selects or points the header. 
 
