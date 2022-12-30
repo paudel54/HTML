@@ -53,7 +53,9 @@ ORDER: Base + Typography > General Layout + grid > page layout > components
 
 /* Universal selector *, its called because it helps in resetting the browers defult assignment. For example, web browser can auto assign width or margin
 when being loaded. To omit such unusal behaviour we define this on css.  */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -78,6 +80,10 @@ body {
   @media (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
 
 body {
   font-family: "lato",sans-serif;
