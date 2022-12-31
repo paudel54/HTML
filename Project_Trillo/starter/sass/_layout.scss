@@ -1,0 +1,31 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto; //centers the container
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+}
+.header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+    //here content holds 2 main block element so we consider it as main flex container and to use flexbox prop we used display:flex here
+    display: flex;
+}
+
+.sidebar {
+    //flex item1
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%; // 1st zero flex scale , shrink, width, 18 % of parent width i.e content width or container width
+}
+
+.hotel-view {
+    //flex item2
+    background-color: #fff;
+    background-color: orange;
+    flex: 1;
+}
