@@ -1,0 +1,53 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+
+// Global reset
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #ff3366;
+    --color-primary-dark: #ba265d;
+}
+
+//It inherits property of box-sizing border-box form html
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+//global setting
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    //required or target font size/ defalut font size .. 10/16*100  => 1 rem = 10px
+}
+
+// The default font size is 16px, so they set the body font size to 62.5%. Therefore:
+// Body font-size = (62.5/100)*16 = 10px
+
+body {
+    font-family: "Open Sans", sans-serif;
+    //If Open Sans from google font dont work default font would be sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
