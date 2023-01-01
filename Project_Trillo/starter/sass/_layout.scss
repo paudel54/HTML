@@ -28,11 +28,18 @@
     //flex item1
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%; // 1st zero flex scale , shrink, width, 18 % of parent width i.e content width or container width
+
+    display: flex;
+    //taking vertical approach to build up sidebar
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     //flex item2
     background-color: #fff;
+    //test
     background-color: orange;
+    height: 80rem;
     flex: 1;
 }
