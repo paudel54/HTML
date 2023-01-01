@@ -10,6 +10,12 @@
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+    display: flex;
+    //adds header to side by side
+    justify-content: space-between;
+
+    //align items helps to justify the block horizontally
+    align-items: center;
 }
 
 .content {
