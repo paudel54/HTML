@@ -10,7 +10,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     display: flex;
     //adds header to side by side
     justify-content: space-between;
@@ -40,6 +40,27 @@
     background-color: #fff;
     //test
     /// background-color: orange;
-    height: 80rem;
+    // height: 80rem;
+    flex: 1;
+}
+
+.detail {
+    //to make description and user-review block side by side
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+.description {
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.06);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    font-size: 1.4rem;
+}
+
+.user-reviews {
+    background-color: greenyellow;
     flex: 1;
 }
