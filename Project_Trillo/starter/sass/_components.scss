@@ -127,15 +127,67 @@
 ///
 
 .side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
     &__item {
+        position: relative;
+
+        //except the last element all element bottom margin must be maintained 0.5rem , also broke pink line animation stater
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
     }
 
-    &__link {
+    &__item::before {
+        //to create the animation start point
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        //animation origin point
+        // transform-origin: bottom;
+
+        // transition: transform 0.2s, width 0.4s  delay 0.2s;
+        transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+    }
+
+    &__item:hover::before,
+    //added modifier to get one element auto selected
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--color-primary--light);
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        position: relative;
+        z-index: 10;
+
+        //for centering the elements
+        display: flex;
+        align-items: center;
     }
 
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
     }
 }
 
