@@ -42,6 +42,7 @@ body {
   min-height: 50rem; }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
@@ -66,7 +67,6 @@ body {
   margin-left: 3rem; }
 
 .search {
-  background-color: orangered;
   flex: 0 0 40%;
   display: flex;
   align-items: center;
@@ -85,6 +85,9 @@ body {
     .search__input:focus {
       outline: none;
       width: 100%; }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
   .search__input:focus + .search__button {
     background-color: var(--color-grey-light-3); }
   .search__button {
@@ -97,7 +100,7 @@ body {
   .search__icon {
     height: 2rem;
     width: 2rem;
-    background-color: var(--color-grey-light-3); }
+    fill: var(--color-grey-dark-3); }
 
 .user-nav {
   background-color: greenyellow; }
