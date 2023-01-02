@@ -24,6 +24,13 @@
 
     //align items helps to justify the block horizontally
     align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+        //lets say we want to reduce 1  0 px font size to 8 px font size   so , 8/16*100% = 50%
+    }
 }
 
 .content {
@@ -67,6 +74,10 @@
     @media only screen and (max-width: $bp-medium) {
         padding: 3rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 .description {
     background-color: #fff;
@@ -78,6 +89,11 @@
     @media only screen and (max-width: $bp-medium) {
         margin-right: 4.5rem;
         padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
     }
 }
 
