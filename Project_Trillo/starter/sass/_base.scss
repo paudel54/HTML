@@ -22,6 +22,15 @@
 
     --line: 1px solid var(--color-grey-light-2);
 }
+
+///SASS VARIABLE FOR MEDIA QUERRY
+
+$bp-largest: 75em; //75*16 = 1200px
+$bp-large: 68.75em;
+//816 = 100px
+
+$bp-medium: 56.25em; // 900/16 for 900px breakpoint width
+
 //It inherits property of box-sizing border-box form html
 *,
 *::before,
@@ -34,6 +43,10 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     //required or target font size/ defalut font size .. 10/16*100  => 1 rem = 10px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; //lets say we want to reduce 10 px font size to 8 px font size   so , 8/16*100% = 50%
+    }
 }
 
 // The default font size is 16px, so they set the body font size to 62.5%. Therefore:
