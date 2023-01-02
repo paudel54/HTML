@@ -289,13 +289,18 @@
     background-color: transparent;
     cursor: pointer;
     transition: all 0.2s;
+    //text-decoration: underline;
 
     & span {
         margin-left: 3px;
+        transition: margin-left 0.2s;
     }
 
     &:hover {
         color: var(--color-grey-dark-1);
+        span {
+            margin-left: 8px;
+        }
     }
 
     &:focus {
