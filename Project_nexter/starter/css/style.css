@@ -15,6 +15,9 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.container {
+  display: grid; }
+
 .sidebar {
   background-color: #c69963; }
 
