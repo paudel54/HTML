@@ -39,4 +39,6 @@ body {
 //applied display grid prop onto the main container
 .container {
     display: grid;
+    //min-content-> adjust the height of content
+    grid-template-rows: 80vh min-content 40vw min-content;
 }
