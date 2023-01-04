@@ -8,9 +8,13 @@
 
     //CREATING NEW GRID DIMENSITONS ONTO THIS GRID ITEM AS NEW GRID CONTAINER
 
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
     //we need not need to define this because by defult it is auto
     //grid-template-rows: auto auto;
+
+    //To make grid column more responsive making some modification to grid-template-columns:
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem;
 
     //since child grid showing grid-item: stretched behaviour, we can fix it by changing the property of parent, gird
