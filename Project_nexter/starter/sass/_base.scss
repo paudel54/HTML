@@ -40,5 +40,19 @@ body {
 .container {
     display: grid;
     //min-content-> adjust the height of content
-    grid-template-rows: 80vh min-content 40vw min-content;
+    //defined row tracks with use of vh and vw for responsiveness
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+
+    //lets say 1140px total screen size divided by 8 total equal col gives 142.5px
+    //so , 142.5 px be considered as 14 rem where 1 rem = 10px
+    grid-template-columns:
+        [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start]
+        repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+        //this works as  col-start1, col-start 2..... col-start 8, likewise col-end 1, col-end 2;
+        [center-end] 1fr [full-end];
+
+    & > * {
+        padding: 40px;
+        font-size: 3rem;
+    }
 }
