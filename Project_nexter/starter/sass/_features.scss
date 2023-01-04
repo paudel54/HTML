@@ -12,4 +12,32 @@
     //we need not need to define this because by defult it is auto
     //grid-template-rows: auto auto;
     grid-gap: 6rem;
+
+    //since child grid showing grid-item: stretched behaviour, we can fix it by changing the property of parent, gird
+    //setting up aligh-item:start
+
+    align-items: start;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        //here -1 doesn't works because the grid is not explictly defined. so better use span property
+        //grid-row: 1/-1;
+
+        //spanning along col
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
