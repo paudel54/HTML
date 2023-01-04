@@ -1,4 +1,15 @@
 .features {
-    background-color: $color-grey-light-2;
+    // background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
+    margin: 15 0;
+
+    // THIS IS ALREADY A GRID ITEM , BUT I WANT TO TURN GRID ITEM INTO A NEXT GRID SO USING display:grid: property makes it possible.
+    display: grid;
+
+    //CREATING NEW GRID DIMENSITONS ONTO THIS GRID ITEM AS NEW GRID CONTAINER
+
+    grid-template-columns: repeat(3, 1fr);
+    //we need not need to define this because by defult it is auto
+    //grid-template-rows: auto auto;
+    grid-gap: 6rem;
 }

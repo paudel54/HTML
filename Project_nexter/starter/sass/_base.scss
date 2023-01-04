@@ -51,8 +51,8 @@ body {
         //this works as  col-start1, col-start 2..... col-start 8, likewise col-end 1, col-end 2;
         [center-end] minmax(6rem, 1fr) [full-end];
 
-    & > * {
-        padding: 40px;
-        font-size: 3rem;
-    }
+    // & > * {
+    //     padding: 40px;
+    //     font-size: 3rem;
+    // }
 }
