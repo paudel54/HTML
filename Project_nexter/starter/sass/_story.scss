@@ -8,10 +8,18 @@
         background-color: $color-grey-light-1;
         grid-column: col-start 5 / full-end;
         padding: 6rem 12rem;
+
+        // using flexbox to center element because it's one dimmensioanl
+        display: flex;
+        //flex direction allows changing axis
+        flex-direction: column;
+        //to center about cross axis align-items: center;
+        justify-content: center;
     }
 
     &__text {
         font-size: 1.5rem;
         font-style: italic;
+        margin-bottom: 4rem;
     }
 }
