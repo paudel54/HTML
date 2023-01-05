@@ -10,11 +10,17 @@
         padding: 6rem 12rem;
 
         // using flexbox to center element because it's one dimmensioanl
-        display: flex;
+        //display: flex;
         //flex direction allows changing axis
-        flex-direction: column;
+        //flex-direction: column;
         //to center about cross axis align-items: center;
-        justify-content: center;
+        //justify-content: center;
+        //by defult it's flex stretched so we can change it to flex start
+        // align-items: flex-start;
+
+        display: grid;
+        align-content: center;
+        justify-items: start;
     }
 
     &__text {
