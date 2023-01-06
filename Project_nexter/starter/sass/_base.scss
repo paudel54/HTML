@@ -18,6 +18,9 @@ $font-display: "Josefin Sans", sans-serif;
 //1200px/16 = 75em
 $bp-largest: 75em;
 
+//1000px/16 = 62.5em breakpoint
+$bp-large: 62.5em;
+
 //ADDING GLOBAL RESET
 
 *,
@@ -65,4 +68,14 @@ body {
     //     padding: 40px;
     //     font-size: 3rem;
     // }
+
+    //CHANGING GRID LAYOUT ON 1000-PX BREAKPOINT
+    @media only screen and (max-width: $bp-large) {
+        display: grid;
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns:
+            [full-start] minmax(6rem, 1fr) [center-start]
+            repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+            [center-end] minmax(6rem, 1fr) [full-end];
+    }
 }
