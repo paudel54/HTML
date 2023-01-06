@@ -14,6 +14,10 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+//SCREEN RESPONSIVE BREAKPOINTS;
+//1200px/16 = 75em
+$bp-largest: 75em;
+
 //ADDING GLOBAL RESET
 
 *,
@@ -27,6 +31,12 @@ $font-display: "Josefin Sans", sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%; //10/16px  -. 1rem 10px
+
+    //for 1200px width we change 1 rem = 8px. ie, 8/16*100 = 505
+    @media only screen and (max-width: $bp-largest) {
+        //here now 1 rem changes to 8 px all sudden in all used elements
+        font-size: 50%;
+    }
 }
 
 body {
