@@ -21,6 +21,9 @@ $bp-largest: 75em;
 //1000px/16 = 62.5em breakpoint
 $bp-large: 62.5em;
 
+//800px/16 = 50em
+$bp-medium: 50em;
+
 //ADDING GLOBAL RESET
 
 *,
@@ -77,5 +80,15 @@ body {
             [full-start] minmax(6rem, 1fr) [center-start]
             repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
             [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    //CHANGING GRID DEFINATION FOR 800px
+
+    @media only screen and (max-width: $bp-medium) {
+        display: grid;
+        // grid-template-rows: 6rem calc(100vh) min-content min-content min-content repeat(3, min-content);
+        //grid layout automatically defines min-contents so we dont't  need to define explicitely
+
+        grid-template-rows: 6rem calc(100vh);
     }
 }
